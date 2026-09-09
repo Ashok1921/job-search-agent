@@ -2,7 +2,7 @@
 
 An automated, AI-scored job search pipeline for the Indian GenAI/Agentic AI job market — pulls live listings, scores them against your resume, and helps you track applications like a mini ATS (Applicant Tracking System).
 
-Built as a hands-on portfolio project by **Ashok **, Generative AI & Agentic AI Developer.
+Built as a hands-on portfolio project by **Ashok D**, Generative AI & Agentic AI Developer.
 
 **Repo:** https://github.com/Ashok1921/job-search-agent
 **Live demo:** https://job-search-agent-clg2d4wufdwzxc5frayqng.streamlit.app/
@@ -14,6 +14,18 @@ Built as a hands-on portfolio project by **Ashok **, Generative AI & Agentic AI 
 1. **Fetches** live job listings from JSearch (aggregates LinkedIn, Indeed, Naukri, Glassdoor via Google for Jobs)
 2. **Scores** every listing against your resume using a hybrid approach — semantic embedding similarity + an LLM qualitative read — producing a single `fit_score` (0–100) with a plain-English rationale for each match
 3. **Tracks** applications through a Streamlit dashboard — shortlist high-fit jobs, update status as you apply and hear back, with a full audit trail auto-logged in Postgres
+
+---
+
+## Screenshots
+
+**Job Feed** — browse scored jobs above an adjustable fit threshold, with fit score breakdown and LLM rationale for each match:
+
+![Job Feed](screenshots/job-feed.png)
+
+**My Applications** — track status per shortlisted job, with full audit history auto-logged on every change:
+
+![My Applications](screenshots/my-applications.png)
 
 ---
 
@@ -45,15 +57,15 @@ JSearch API (RapidAPI)
 
 ## Tech stack
 
-| Layer           | Choice                                                                            |
-| --------------- | --------------------------------------------------------------------------------- |
+| Layer | Choice |
+|---|---|
 | Job data source | [JSearch API](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch) via RapidAPI |
-| Language        | Python                                                                            |
-| Database        | PostgreSQL (local for dev,[Neon](https://neon.tech) for hosted/deployed)           |
-| Embeddings      | `sentence-transformers` (`all-mpnet-base-v2`), local/free                     |
-| LLM scoring     | Google Gemini 2.5 Flash (`google-genai` SDK)                                    |
-| Dashboard       | Streamlit                                                                         |
-| Deployment      | Streamlit Community Cloud + Neon                                                  |
+| Language | Python |
+| Database | PostgreSQL (local for dev, [Neon](https://neon.tech) for hosted/deployed) |
+| Embeddings | `sentence-transformers` (`all-mpnet-base-v2`), local/free |
+| LLM scoring | Google Gemini 2.5 Flash (`google-genai` SDK) |
+| Dashboard | Streamlit |
+| Deployment | Streamlit Community Cloud + Neon |
 
 ---
 
@@ -91,7 +103,6 @@ job-search-agent/
 ## Setup
 
 ### 1. Clone and install
-
 ```bash
 git clone https://github.com/Ashok1921/job-search-agent.git
 cd job-search-agent
@@ -102,7 +113,6 @@ pip install sentence-transformers google-genai requests   # for fetcher.py/score
 ```
 
 ### 2. Environment variables (`.env`)
-
 ```
 RAPIDAPI_KEY=your_jsearch_rapidapi_key
 GEMINI_API_KEY=your_gemini_api_key
@@ -119,14 +129,12 @@ DB_PASSWORD=your_password
 ```
 
 ### 3. Create the database schema
-
 ```bash
 createdb -U postgres job_search_agent
 psql -U postgres -d job_search_agent -f schema.sql
 ```
 
 ### 4. Run the pipeline
-
 ```bash
 python fetcher.py --query "Generative AI Developer in Hyderabad" --pages 2
 python scorer.py --resume resume.txt --limit 20
