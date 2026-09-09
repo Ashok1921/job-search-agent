@@ -156,6 +156,36 @@ Deployed using the same free-tier pattern as [Autonomous AI Stock Agent](https:/
 
 ---
 
+## Useful links
+
+**Project**
+- Repo: https://github.com/Ashok1921/job-search-agent
+- Live app: https://job-search-agent-clg2d4wufdwzxc5frayqng.streamlit.app/
+
+**Services this project depends on**
+- JSearch API (RapidAPI) — manage `RAPIDAPI_KEY`: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+- Google AI Studio — manage `GEMINI_API_KEY`: https://aistudio.google.com/apikey
+- Neon console — manage the hosted Postgres database: https://console.neon.tech
+- Streamlit Community Cloud — manage the deployed app, secrets, logs: https://share.streamlit.io
+
+**Local commands**
+```bash
+# Fetch new jobs
+python fetcher.py --query "Generative AI Developer in Hyderabad" --pages 2
+
+# Score unscored jobs
+python scorer.py --resume resume.txt --limit 20
+
+# Run dashboard locally (local Postgres)
+python -m streamlit run dashboard.py
+
+# Run dashboard locally, pointed at Neon
+$env:DATABASE_URL="<your neon connection string>"
+python -m streamlit run dashboard.py
+```
+
+---
+
 ## Known limitations
 
 - Job descriptions from JSearch occasionally contain minor character-encoding artifacts (e.g. mis-rendered em-dashes) — cosmetic only, doesn't affect scoring.
