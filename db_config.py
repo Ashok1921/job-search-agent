@@ -19,7 +19,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")  # e.g. Neon connection string
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Fallback: on Streamlit Community Cloud, secrets are primarily accessed via
+# st.secrets rather than os.environ. Streamlit does auto-sync flat top-level
+# secrets into os.environ, but we check st.secrets explicitly too so this
+# works even if that behavior changes.
+if not DATABASE_URL:
+    try:
+        import streamlit as st
+        DATABASE_URL = st.secrets.get("DATABASE_URL")
+    except Exception:
+        pass  # not running under Streamlit, or no secrets configured
 
 LOCAL_DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
