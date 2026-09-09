@@ -1,0 +1,35 @@
+ASHOK D — Generative AI & Agentic AI Developer
+Hyderabad, India
+
+PROFESSIONAL SUMMARY
+Generative AI & Agentic AI Developer with 3+ years of software development experience, specialising in LLM-powered solutions, Retrieval-Augmented Generation (RAG) systems, and multi-agent workflows. Strong foundation in Python, deep learning, and scalable AI architectures with proven real-world deployment experience.
+
+TECHNICAL SKILLS
+Programming: Python
+Generative AI: LLMs, Prompt Engineering, RAG, LangChain, Hugging Face
+Agentic AI: Multi-Agent Systems, CrewAI, AutoGen
+Machine Learning: Regression, Classification, Clustering, NLP
+Deep Learning: ANN, CNN, RNN, LSTM
+Libraries & Tools: Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, OpenCV, Streamlit
+NLP: Tokenization, TF-IDF, Word2Vec, Text Summarization
+Databases: MySQL
+Dev Tools: Git, VS Code, Jupyter Notebook
+
+PROJECTS
+Retrieval-Augmented Generation (RAG) System — Built an intelligent document Q&A system using LLMs and vector databases, integrated embeddings with FAISS for high-accuracy semantic search, used LangChain for end-to-end pipeline orchestration, enabled contextual responses from custom domain-specific data sources. Tech Stack: Python, LangChain, FAISS, Hugging Face, OpenAI.
+
+Number Plate Detection System — Developed an automated number plate recognition (ANPR) system, implemented advanced image preprocessing and OCR techniques for accuracy. Tech Stack: Python, OpenCV, OCR, Deep Learning.
+
+Multi-Agent AI System (Agentic AI) — Designed a multi-agent system using CrewAI for collaborative task execution, implemented specialised agents for research, analysis, and content generation, enabled autonomous task delegation and intelligent workflow execution, integrated external tools including search APIs and LLM providers. Tech Stack: Python, CrewAI, LLM APIs, Serper Tool.
+
+AI Text-to-Image Generator — Developed a Generative AI application converting natural language prompts into images using Stable Diffusion XL, integrated HuggingFace Diffusers pipeline for high-quality image synthesis. Tech Stack: Python, PyTorch, HuggingFace Diffusers, Gradio.
+
+AI Chatbot using LangChain, Gemini 2.5 Flash & Streamlit — Integrated Gemini 2.5 Flash via API for low-latency, high-quality conversational responses, implemented persistent conversation memory using LangChain for context retention, designed dynamic prompt templates for structured and adaptive responses, built a responsive real-time chat UI with Streamlit. Tech Stack: Python, LangChain, Gemini 2.5 Flash API, Streamlit.
+
+PROFESSIONAL EXPERIENCE
+Junior Software Engineer, Cybrowse Digital Solutions Pvt. Ltd., Hyderabad (Mar 2023 – Apr 2026)
+Built scalable backend systems and RESTful APIs for production environments. Transitioned into AI-based solutions, developing data-driven and LLM-powered applications.
+
+KEY HIGHLIGHTS
+Hands-on experience designing and deploying Generative AI and Agentic AI systems. Built production-grade AI applications leveraging state-of-the-art LLMs. Strong dual foundation in software engineering and AI integration.
+

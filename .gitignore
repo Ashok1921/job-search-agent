@@ -1,0 +1,24 @@
+# Environment / secrets
+.env
+*.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / editor junk
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local schema dumps (contain no secrets but no need to track generated dumps)
+neon_schema.sql
